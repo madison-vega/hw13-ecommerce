@@ -57,7 +57,7 @@ router.delete('/:id', (req, res) => {
       }
     })
     res.status(200).json(deleteCat);
-  } catch (error) {
+  } catch (err) {
     res.status(500).json(err);
   }
 });
