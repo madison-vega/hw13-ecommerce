@@ -94,7 +94,7 @@ router.put('/:id', (req, res) => {
       res.status(400).json(err);
     });
 });
-
+// delete product
 router.delete('/:id', (req, res) => {
   try {
     const deleteProd = await Product.destroy({
