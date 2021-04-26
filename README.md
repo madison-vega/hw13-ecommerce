@@ -1,7 +1,7 @@
 # hw13-ecommerce
 
 ## Description
-
+This is a backend application for an e-commerce site utlizing sequelize and APIs.  It is important to be able to create a top-notch back end system for both the consumer as well as a student due to the heightened popularity of e-commerce.  This will help companies remain competitve.   
 
 
 ## Table of Contents 
@@ -14,13 +14,16 @@
 
 
 ## Installation
+You may clone the repository to your local machine, then ensure you npm i, the required packages.  You will also have to input your credentials into a .env file, then seed the database to establish connection with mySql.  
 
 
 ## Usage 
+After installation you can then test the api endpoints in either Insomnia or Postman.
 
 
 
 ## Credits
+I utlizied [Insomnia](https://insomnia.rest/) to test my API endpoints.
 
 
 
