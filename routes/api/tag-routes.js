@@ -3,7 +3,7 @@ const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
 // gets all tags
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const tags = await Tag.findAll({
       include: [
@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
   }
 });
 // gets one tag
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const oneTag = await Tag.findByPk(req.params.id, {
       include: [
@@ -35,7 +35,7 @@ router.get('/:id', (req, res) => {
   }
 });
 // create new tag
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newTag = await Tag.create(req.body);
     res.status(200).json(newTag);
@@ -44,7 +44,7 @@ router.post('/', (req, res) => {
   }
 });
 // update tag
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const updateTag = await Tag.update(req.body, {
       where: {
@@ -58,7 +58,7 @@ router.put('/:id', (req, res) => {
   };
 });
 // delete tag
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const deleteTag = await Tag.destroy({
       where: {
